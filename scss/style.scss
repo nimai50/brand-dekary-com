@@ -1,0 +1,172 @@
+// Import custom color variables first
+@import "primitives";
+
+// Custom Bootstrap variables - must be set before importing Bootstrap
+$primary: rgb(252, 239, 56);
+$secondary: rgb(124, 58, 197);
+$success: rgb(137, 193, 62);
+$info: rgb(46, 203, 214);
+$warning: rgb(255, 129, 26);
+
+// Required Bootstrap files
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Custom font variables
+$font-family-primary: 'Quicksand', sans-serif;
+$font-family-secondary: 'Quicksand', sans-serif;
+$font-family-playwright: 'Playwrite US Modern', cursive;
+$font-family-quicksand: 'Quicksand', sans-serif;
+
+// Layout & components
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// Import custom styles
+@import "custom";
+@import "typography";
+
+// Custom styles
+$sidebar-width: 280px;
+
+
+html, body {
+  overflow-x: hidden;
+  font-family: $font-family-primary;
+}
+
+a{
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: underline;
+  color: var(--Blue__600);
+}
+
+.sidebar {
+  width: $sidebar-width;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+
+.main-content {
+  margin-left: $sidebar-width;
+  transition: all 0.3s;
+  width: calc(100% - #{$sidebar-width});
+  overflow-x: hidden;
+}
+
+.nav-link {
+  color: #495057;
+  font-weight: 500;
+  
+  &:hover, &.active {
+    color: var(--Purple__500);
+    background-color: var(--Purple__50);
+    border-left: 3px solid rgb(124, 58, 197);
+  }
+}
+
+.section-title {
+  border-bottom: 2px solid var(--Purple__500);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--Purple__500);
+}
+
+.content-section {
+  display: none;
+  
+  &.active {
+    display: block;
+    animation: fadeIn 0.5s;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+// SECCION LOGO
+
+#logo{
+  .card-logo{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+// SECCION COLORES
+
+#color-palette{
+  .card-color{
+    color: inherit;
+    font-size: .85rem;
+    border-radius: 8px;
+  }
+  .card-body{
+    color: inherit;
+    font-size: .85rem;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Sass cache
+.sass-cache/
+
+# Compiled CSS (optional - you might want to commit this)
+assets/css/*.css
+!assets/css/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
