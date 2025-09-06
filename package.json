@@ -6,6 +6,8 @@
   "scripts": {
     "sass": "sass scss/style.scss assets/css/style.css",
     "sass-watch": "sass --watch scss:assets/css",
+    "sass-prod": "sass scss/style.scss assets/css/style.css --style=compressed --no-source-map",
+    "build": "npm run sass-prod",
     "start": "npm run sass-watch"
   },
   "keywords": [

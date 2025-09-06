@@ -1,58 +1,107 @@
-# Brand Identity Guidelines
+# Brand Identity Guidelines - Dekary
 
-This project uses Bootstrap 5.2 and Font Awesome with Sass for styling to create a comprehensive brand identity guideline document.
+Este proyecto utiliza Bootstrap 5.3.8 y Font Awesome con Sass para crear una guía completa de identidad de marca para Dekary.
 
-## Folder Structure
+## 🌐 Sitio Web
+**URL de Producción**: https://brand.dekary.com/
 
-- `index.html` - Main HTML file with sidebar navigation
-- `/assets` - Contains compiled assets
-  - `/css` - Compiled CSS files
-  - `/js` - JavaScript files
-  - `/img` - Image assets
-- `/scss` - Sass source files
-  - `style.scss` - Main Sass file
-  - `/sections` - Sass partials for different sections
+## 📁 Estructura del Proyecto
 
-## Features
+- `index.html` - Archivo HTML principal con navegación lateral
+- `/assets` - Contiene assets compilados
+  - `/css` - Archivos CSS compilados
+  - `/js` - Archivos JavaScript
+  - `/img` - Assets de imagen (logos SVG)
+- `/scss` - Archivos fuente Sass
+  - `style.scss` - Archivo Sass principal
+  - `_custom.scss` - Estilos personalizados
+  - `_primitives.scss` - Variables de colores
+  - `_typography.scss` - Estilos tipográficos
 
-- Responsive sidebar navigation with collapsible sections
-- Comprehensive brand identity guidelines organized in logical sections
-- Interactive navigation with active state highlighting
-- Mobile-responsive design using Bootstrap 5.2 grid system
-- Custom styling with Sass variables and mixins
+## 🚀 Despliegue en GitHub Pages
 
-## Development
+### Pasos para actualizar la página:
 
-To compile Sass to CSS, use a Sass compiler:
+1. **Instalar dependencias**:
+   ```bash
+   npm install
+   ```
 
+2. **Compilar Sass para producción**:
+   ```bash
+   npm run build
+   ```
+
+3. **Hacer commit y push**:
+   ```bash
+   git add .
+   git commit -m "Update brand guidelines"
+   git push origin main
+   ```
+
+4. **GitHub Pages se actualizará automáticamente** en unos minutos.
+
+## 🛠️ Desarrollo
+
+### Compilar Sass para desarrollo:
 ```bash
-sass scss/style.scss assets/css/style.css
+npm run sass
 ```
 
-Or watch for changes:
-
+### Compilar Sass para producción (optimizado):
 ```bash
-sass --watch scss:assets/css
+npm run build
 ```
 
-## Sections Included
+### Modo watch para desarrollo:
+```bash
+npm run sass-watch
+```
 
-1. **Identidad visual**
-   - Logotipo (variaciones permitidas, tamaños y usos incorrectos)
-   - Paleta de colores principal y secundaria
-   - Tipografía (primaria y secundaria)
-   - Iconografía y elementos gráficos
-   - Estilo fotográfico e ilustraciones
+## ✨ Características
 
-2. **Manual de uso y ejemplos prácticos**
-   - Aplicación en merchandising
-   - Señalización y uniformes (si aplica)
-   - Ejemplos de campañas
+- Navegación lateral responsive con secciones colapsables
+- Guía completa de identidad de marca organizada en secciones lógicas
+- Navegación interactiva con resaltado de estado activo
+- Diseño responsive usando el sistema de grid de Bootstrap 5.3.8
+- Estilos personalizados con variables y mixins de Sass
+- Sistema de colores completo con design tokens
+- Tipografía personalizada (Quicksand + Playwrite HU)
 
-## Customization
+## 📋 Secciones Incluidas
 
-To customize the brand identity guidelines:
-1. Modify the SCSS files in the `/scss` directory
-2. Update content in `index.html`
-3. Add images to `/assets/img` as needed
-4. Compile SCSS to CSS using the commands above
+1. **Identidad de marca** - Misión y visión
+2. **Logotipo** - Variaciones y usos correctos/incorrectos
+3. **Paleta de colores** - Sistema completo de colores
+4. **Tipografía** - Fuentes y jerarquía
+5. **Iconografía** - Uso de Font Awesome
+6. **Estilo fotográfico** - Directrices para imágenes
+7. **Ejemplos prácticos** - Aplicaciones reales
+8. **Aplicación** - Uso en diferentes medios
+9. **Señalización** - Normas para señalética
+10. **Campañas** - Ejemplos de marketing
+
+## 🎨 Personalización
+
+Para personalizar la guía de identidad de marca:
+1. Modifica los archivos SCSS en el directorio `/scss`
+2. Actualiza el contenido en `index.html`
+3. Añade imágenes a `/assets/img` según sea necesario
+4. Compila SCSS a CSS usando `npm run build`
+5. Haz commit y push para actualizar GitHub Pages
+
+## 📱 Responsive Design
+
+El sitio está optimizado para:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
+
+## 🔧 Tecnologías
+
+- HTML5
+- CSS3 + Sass
+- Bootstrap 5.3.8
+- Font Awesome 6.4.0
+- JavaScript ES6
+- Google Fonts
